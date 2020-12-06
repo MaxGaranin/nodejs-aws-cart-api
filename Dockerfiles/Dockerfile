@@ -22,5 +22,6 @@ RUN npm install --only=production
 
 COPY --from=build /app ./
 USER node
+ENV PORT=4000
 EXPOSE 4000
 CMD [ "node", "dist/main.js" ]
