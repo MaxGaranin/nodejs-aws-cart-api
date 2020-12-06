@@ -1,5 +1,5 @@
 #---- Base Node image ----
-FROM node:12.16.3 AS base
+FROM node:12 AS base
 WORKDIR /app
 
 #---- Dependencies ----
@@ -14,7 +14,7 @@ COPY ./ ./
 RUN npm run build && npm cache clean --force
 
 #---- Release with Alpine ----
-FROM node:12.16.3-alpine AS release
+FROM node:12-alpine AS release
 WORKDIR /app
 
 COPY --from=dependencies /app/package.json ./
