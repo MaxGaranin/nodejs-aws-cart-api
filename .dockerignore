@@ -1,0 +1,12 @@
+# Git folder (can be big for a long-developing apps)
+.git
+
+# Folder for Node modules (very big folder)
+node_modules
+npm-debug
+
+# Folder with built app
+dist
+
+# VS Code service folder
+.vscode
